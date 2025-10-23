@@ -152,7 +152,49 @@
   --container-lg: 1024px;
   --container-xl: 1280px;
 }
-
+/* MOBILE BACKGROUND FIX */
+    section { 
+        background-color: #F5F1E8 !important; 
+    }
+    
+    .product-card, 
+    .testimonial-card, 
+    .feature-card { 
+        background-color: #FFFFFF !important; 
+        color: #2C2416 !important; 
+    }
+    
+    @media screen and (max-width: 768px) {
+        body { 
+            background-color: #F5F1E8 !important; 
+        }
+        
+        section { 
+            background-color: #F5F1E8 !important; 
+        }
+        
+        .card, 
+        .product-card, 
+        .testimonial-card, 
+        .feature-card {
+            background-color: #FFFFFF !important;
+            color: #2C2416 !important;
+        }
+        
+        .card h2, 
+        .card h3, 
+        .card h4, 
+        .product-card h3, 
+        .testimonial-card h4 {
+            color: #6B4226 !important;
+        }
+        
+        .card p, 
+        .product-card p, 
+        .testimonial-card p {
+            color: #2C2416 !important;
+        }
+    }
 /* Dark mode colors */
 @media (prefers-color-scheme: dark) {
   :root {
