@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DesiSuddha — Premium Organic Food Products | Wheat, Rice, Pulses &amp; Spices</title>
+  <meta name="description" content="DesiSuddha offers premium organic wheat, rice, pulses &amp; spices. Pure, natural &amp; authentic products sourced from certified organic farms." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: rgba(59, 130, 246, 0.08); /* Light blue */
+  --color-bg-2: rgba(245, 158, 11, 0.08); /* Light yellow */
+  --color-bg-3: rgba(34, 197, 94, 0.08); /* Light green */
+  --color-bg-4: rgba(239, 68, 68, 0.08); /* Light red */
+  --color-bg-5: rgba(147, 51, 234, 0.08); /* Light purple */
+  --color-bg-6: rgba(249, 115, 22, 0.08); /* Light orange */
+  --color-bg-7: rgba(236, 72, 153, 0.08); /* Light pink */
+  --color-bg-8: rgba(6, 182, 212, 0.08); /* Light cyan */
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  /* Common style patterns */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+  /* RGB versions for opacity control */
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
+
+  /* Typography */
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* RGB versions for opacity control (Dark Mode) */
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    /* Background color tokens (Dark Mode) */
+    --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+    --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+    --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+    --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+    --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+    --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+    --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+    --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+
+    /* Semantic Color Tokens (Dark Mode) */
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+    /* Common style patterns - updated for dark mode */
+    --focus-ring: 0 0 0 3px var(--color-focus-ring);
+    --focus-outline: 2px solid var(--color-primary);
+    --status-bg-opacity: 0.15;
+    --status-border-opacity: 0.25;
+    --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+    /* RGB versions for dark mode */
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+/* Data attribute for manual theme switching */
+[data-color-scheme="dark"] {
+  /* RGB versions for opacity control (dark mode) */
+  --color-gray-400-rgb: 119, 124, 124;
+  --color-teal-300-rgb: 50, 184, 198;
+  --color-gray-300-rgb: 167, 169, 169;
+  --color-gray-200-rgb: 245, 245, 245;
+
+  /* Colorful background palette - Dark Mode */
+  --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+  --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+  --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+  --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+  --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+  --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+  --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+  --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+
+  /* Semantic Color Tokens (Dark Mode) */
+  --color-background: var(--color-charcoal-700);
+  --color-surface: var(--color-charcoal-800);
+  --color-text: var(--color-gray-200);
+  --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+  --color-primary: var(--color-teal-300);
+  --color-primary-hover: var(--color-teal-400);
+  --color-primary-active: var(--color-teal-800);
+  --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+  --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+  --color-error: var(--color-red-400);
+  --color-success: var(--color-teal-300);
+  --color-warning: var(--color-orange-400);
+  --color-info: var(--color-gray-300);
+  --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+  --color-btn-primary-text: var(--color-slate-900);
+  --color-card-border: rgba(var(--color-gray-400-rgb), 0.15);
+  --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+  --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+  /* Common style patterns - updated for dark mode */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+  /* RGB versions for dark mode */
+  --color-success-rgb: var(--color-teal-300-rgb);
+  --color-error-rgb: var(--color-red-400-rgb);
+  --color-warning-rgb: var(--color-orange-400-rgb);
+  --color-info-rgb: var(--color-gray-300-rgb);
+}
+
+[data-color-scheme="light"] {
+  /* RGB versions for opacity control (light mode) */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+
+  /* RGB versions for light mode */
+  --color-success-rgb: var(--color-teal-500-rgb);
+  --color-error-rgb: var(--color-red-500-rgb);
+  --color-warning-rgb: var(--color-orange-500-rgb);
+  --color-info-rgb: var(--color-slate-500-rgb);
+}
+
+/* Base styles */
+html {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-md); }
+
+p { margin: 0 0 var(--space-16) 0; }
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+a:hover { color: var(--color-primary-hover); }
+
+code,
+pre {
+  font-family: var(--font-family-mono);
+  font-size: calc(var(--font-size-base) * 0.95);
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-sm);
+}
+
+code { padding: var(--space-1) var(--space-4); }
+pre {
+  padding: var(--space-16);
+  margin: var(--space-16) 0;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+}
+pre code { background: none; padding: 0; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+.btn--primary { background: var(--color-primary); color: var(--color-btn-primary-text); }
+.btn--primary:hover { background: var(--color-primary-hover); }
+.btn--primary:active { background: var(--color-primary-active); }
+
+.btn--secondary { background: var(--color-secondary); color: var(--color-text); }
+.btn--secondary:hover { background: var(--color-secondary-hover); }
+.btn--secondary:active { background: var(--color-secondary-active); }
+
+.btn--outline { background: transparent; border: 1px solid var(--color-border); color: var(--color-text); }
+.btn--outline:hover { background: var(--color-secondary); }
+
+.btn--lg { padding: var(--space-10) var(--space-20); font-size: var(--font-size-lg); border-radius: var(--radius-md); }
+
+/* Form elements (not used but kept for system completeness) */
+.form-control { display: block; width: 100%; padding: var(--space-8) var(--space-12); font-size: var(--font-size-md); line-height: 1.5; color: var(--color-text); background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-base); transition: border-color var(--duration-fast) var(--ease-standard), box-shadow var(--duration-fast) var(--ease-standard); }
+
+/* Card */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 300ms var(--ease-standard), box-shadow 300ms var(--ease-standard);
+}
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.card__body { padding: var(--space-16); }
+
+/* Container */
+.container { width: 100%; margin: 0 auto; padding: 0 var(--space-16); }
+@media (min-width: 640px){ .container{ max-width: var(--container-sm);} }
+@media (min-width: 768px){ .container{ max-width: var(--container-md);} }
+@media (min-width: 1024px){ .container{ max-width: var(--container-lg);} }
+@media (min-width: 1280px){ .container{ max-width: 1400px;} }
+
+@font-face { font-family: 'FKGroteskNeue'; src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2'); }
+
+/* === Brand theme (custom variables) === */
+:root{
+  --brand-primary: #6B4226; /* deep brown */
+  --brand-secondary: #B87860; /* terracotta */
+  --brand-accent: #6B7A5A; /* olive */
+  --brand-bg: #F5F1E8; /* cream */
+  --brand-text: #2C2416; /* dark brown */
+  --brand-highlight: #CAB6A0; /* warm beige */
+  --brand-white: #FFFFFF;
+  --brand-cream: #FFF8DC;
+  --glass-bg: rgba(255,255,255,0.6);
+  --glass-border: rgba(94, 82, 64, 0.15);
+}
+
+html { scroll-behavior: smooth; }
+body { color: var(--brand-text); background-color: var(--brand-bg); font-family: Inter, var(--font-family-base); }
+
+h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; color: var(--brand-text); }
+
+/* Header (glassmorphism) */
+.site-header { position: fixed; inset: 0 0 auto 0; height: 72px; display: flex; align-items: center; z-index: 50; backdrop-filter: blur(10px); background-color: var(--glass-bg); border-bottom: 1px solid var(--glass-border); transition: background-color 300ms var(--ease-standard), border-color 300ms var(--ease-standard); }
+.site-header.scrolled { background-color: rgba(255,255,255,0.9); border-color: rgba(94, 82, 64, 0.25);} 
+.header-inner { display:flex; align-items:center; justify-content: space-between; gap: var(--space-16); }
+.brand { font-weight: 700; letter-spacing: 0.02em; color: var(--brand-primary); font-family: 'Playfair Display', Georgia, serif; font-size: 22px; }
+
+.nav { display:flex; gap: 24px; align-items:center; }
+.nav a { color: var(--brand-text); font-weight: 500; opacity: 0.9; position: relative; padding: 6px 2px; }
+.nav a.active::after, .nav a:hover::after { content: ""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background: var(--brand-secondary); }
+
+/* Mobile menu */
+.menu-toggle { display:none; width:40px; height:40px; border-radius: 10px; border: 1px solid var(--color-border); background: var(--color-surface); align-items:center; justify-content:center; }
+.menu-toggle span { width:18px; height:2px; background: var(--brand-text); display:block; position:relative; transition: transform 300ms var(--ease-standard); }
+.menu-toggle span::before, .menu-toggle span::after { content:""; position:absolute; left:0; right:0; height:2px; background: var(--brand-text); transition: transform 300ms var(--ease-standard), opacity 300ms var(--ease-standard); }
+.menu-toggle span::before { top:-6px; }
+.menu-toggle span::after { top:6px; }
+.menu-toggle.active span { background: transparent; }
+.menu-toggle.active span::before { transform: translateY(6px) rotate(45deg); }
+.menu-toggle.active span::after { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 900px){
+  .nav { position: fixed; top:72px; left:0; right:0; background: var(--color-surface); border-bottom: 1px solid var(--color-border); transform: translateY(-120%); transition: transform 300ms var(--ease-standard); padding: 16px 24px; flex-direction: column; gap: 12px; }
+  .nav.open { transform: translateY(0); }
+  .menu-toggle { display:flex; }
+}
+
+/* Hero */
+.hero { min-height: 100vh; display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; padding-top: 72px; }
+@media (max-width: 1024px){ .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 88px; } }
+.hero-media { display:flex; align-items:center; justify-content:center; padding: 24px; }
+.hero-media .frame { width: 100%; max-width: 620px; aspect-ratio: 4 / 5; background: var(--color-surface); border: 1px solid var(--color-card-border); border-radius: 18px; box-shadow: var(--shadow-lg); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.hero-media img { width: 100%; height: 100%; object-fit: contain; transform: translateY(0); transition: transform 400ms var(--ease-standard); }
+
+.hero-copy { padding: 24px; }
+.hero-eyebrow { display:inline-block; background: rgba(203, 182, 160, 0.3); color: var(--brand-primary); padding: 6px 12px; border-radius: 999px; font-weight: 600; font-size: 12px; letter-spacing: 0.08em; }
+.hero h1 { font-size: 56px; line-height: 1.05; margin: 16px 0; }
+.hero .tagline { font-size: 22px; color: var(--brand-secondary); font-weight: 600; margin-bottom: 8px; }
+.hero .subtitle { font-size: 16px; color: rgba(44,36,22,0.85); margin-bottom: 24px; }
+.cta-group { display:flex; gap: 14px; align-items:center; flex-wrap: wrap; }
+.cta-primary { background: var(--brand-primary); color: var(--brand-white); border-radius: 999px; padding: 12px 22px; box-shadow: 0 8px 24px rgba(107,66,38,0.25); }
+.cta-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(107,66,38,0.28); }
+.cta-secondary { border: 1px solid var(--color-border); border-radius: 999px; padding: 12px 18px; color: var(--brand-primary); background: var(--color-surface); }
+
+/* Sections */
+.section { padding: 80px 0; }
+.section-header { text-align:center; margin-bottom: 40px; }
+.section-header h2 { font-size: 40px; }
+.section-header p { color: var(--color-text-secondary); max-width: 700px; margin: 10px auto 0; }
+
+/* Featured Packages */
+.featured-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+@media (max-width: 900px){ .featured-grid { grid-template-columns: 1fr; } }
+.package { display:flex; flex-direction: column; gap: 16px; }
+.package .photo { background: var(--color-surface); border: 1px solid var(--color-card-border); border-radius: 16px; box-shadow: var(--shadow-md); display:flex; align-items:center; justify-content:center; padding: 18px; height: 420px; }
+.package .photo img { width: 100%; height: 100%; object-fit: contain; }
+.package .meta h3 { font-size: 24px; margin-bottom: 6px; }
+.package .meta .contains { color: var(--color-text-secondary); margin-bottom: 6px; }
+.package .meta .desc { color: rgba(44,36,22,0.85); }
+
+/* Product grid */
+.products-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+@media (max-width: 1024px){ .products-grid { grid-template-columns: repeat(2, 1fr);} }
+@media (max-width: 640px){ .products-grid { grid-template-columns: 1fr;} }
+.product { padding: 18px; border: 1px solid var(--color-card-border); background: var(--color-surface); border-radius: 16px; box-shadow: var(--shadow-sm); transition: transform 250ms var(--ease-standard), box-shadow 250ms var(--ease-standard); }
+.product:hover { transform: translateY(-5px) scale(1.02); box-shadow: var(--shadow-md); }
+.product .icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(107, 122, 90, 0.12); display:flex; align-items:center; justify-content:center; margin-bottom: 12px; }
+.product .title { font-size: 18px; font-weight: 600; color: var(--brand-primary); }
+.product .meta { color: var(--color-text-secondary); margin: 4px 0 8px; font-size: 13px; }
+.product .text { color: rgba(44,36,22,0.9); }
+
+/* Why choose us */
+.features { display:grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+@media (max-width: 1024px){ .features { grid-template-columns: repeat(2, 1fr);} }
+@media (max-width: 640px){ .features { grid-template-columns: 1fr;} }
+.feature { padding: 18px; border-radius: 14px; background: var(--color-bg-3); border: 1px solid var(--color-border); display:flex; gap: 12px; align-items:center; }
+.feature .ficon { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-highlight); display:flex; align-items:center; justify-content:center; opacity: 0.85; }
+.feature h4 { font-size: 16px; }
+
+/* Testimonials */
+.testimonials { background: var(--brand-cream); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+.testimonial-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 900px){ .testimonial-grid { grid-template-columns: 1fr; } }
+.testimonial { background: var(--color-surface); border: 1px solid var(--color-card-border); border-radius: 16px; padding: 22px; position: relative; }
+.testimonial .quote { color: rgba(44,36,22,0.9); font-style: italic; }
+.testimonial .author { margin-top: 12px; font-weight: 600; color: var(--brand-primary); }
+.testimonial .location { color: var(--color-text-secondary); font-size: 13px; }
+.stars { color: var(--brand-highlight); letter-spacing: 2px; margin-top: 8px; }
+
+/* About */
+.about { display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; align-items: center; }
+@media (max-width: 900px){ .about { grid-template-columns: 1fr; } }
+.values { display:flex; gap: 10px; flex-wrap: wrap; }
+.values .chip { background: rgba(107, 66, 38, 0.08); color: var(--brand-primary); border: 1px solid var(--color-card-border); border-radius: 999px; padding: 8px 12px; font-weight: 600; font-size: 12px; }
+
+/* Footer */
+.site-footer { background: var(--color-surface); border-top: 1px solid var(--color-border); }
+.footer-grid { display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 24px; }
+@media (max-width: 900px){ .footer-grid { grid-template-columns: 1fr; } }
+.footer h3 { color: var(--brand-primary); font-size: 18px; margin-bottom: 10px; }
+.footer p, .footer a { color: var(--brand-text); opacity: 0.9; }
+.socials { display:flex; gap: 10px; margin-top: 10px; }
+.socials a { width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--color-border); display:flex; align-items:center; justify-content:center; }
+.footer-bottom { border-top: 1px solid var(--color-border); margin-top: 20px; padding-top: 16px; text-align: center; color: var(--color-text-secondary); }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 600ms var(--ease-standard), transform 600ms var(--ease-standard); }
+.reveal.in { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="DesiSuddha home">DesiSuddha</a>
+      <nav class="nav" aria-label="Primary Navigation">
+        <a href="#home">Home</a>
+        <a href="#featured">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero container">
+      <div class="hero-media reveal">
+        <div class="frame">
+          <img data-image-id="package_1" alt="DesiSuddha Premium Variety Box package" />
+        </div>
+      </div>
+      <div class="hero-copy reveal">
+        <span class="hero-eyebrow">Organic Excellence</span>
+        <h1>DesiSuddha</h1>
+        <div class="tagline">Organic Food From India</div>
+        <p class="subtitle">Pure. Natural. Authentic.</p>
+        <div class="cta-group">
+          <a class="btn btn--primary btn--lg cta-primary" href="https://forms.gle/YOUR_FORM_ID" target="_blank" rel="noopener noreferrer">Shop Now</a>
+          <a class="btn btn--outline btn--lg cta-secondary" href="#featured">Explore Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Packages -->
+    <section id="featured" class="section container">
+      <div class="section-header reveal">
+        <h2>Our Premium Collection</h2>
+        <p>Discover our signature packages crafted for quality &amp; taste.</p>
+      </div>
+      <div class="featured-grid">
+        <article class="package reveal">
+          <div class="photo">
+            <img data-image-id="package_1" alt="Premium Variety Box package image" />
+          </div>
+          <div class="meta">
+            <h3>Premium Variety Box</h3>
+            <div class="contains">Contains: Organic Wheat, White Rice, Toor Dal &amp; Moong Dal</div>
+            <p class="desc">Experience the complete range of our finest organic products.</p>
+          </div>
+        </article>
+        <article class="package reveal">
+          <div class="photo">
+            <img data-image-id="package_2" alt="Artisan Collection package image" />
+          </div>
+          <div class="meta">
+            <h3>Artisan Collection</h3>
+            <div class="contains">Contains: Premium Rice, Pulses &amp; Spices</div>
+            <p class="desc">Handpicked grains and authentic Indian spices.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Individual Products -->
+    <section id="products" class="section container">
+      <div class="section-header reveal">
+        <h2>Individual Products</h2>
+        <p>Stone-ground flours, aged rice, nutrient-rich pulses &amp; aromatic spices.</p>
+      </div>
+      <div class="products-grid">
+        <!-- Grains -->
+        <article class="product reveal">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20c4-2 6-6 6-10-4 2-6 6-6 10Z"/><path d="M10 18c4-2 6-6 6-10-4 2-6 6-6 10Z"/><path d="M8 22s3-1 6-4 4-6 4-6"/></svg>
+          </div>
+          <div class="title">Organic Whole Wheat Flour</div>
+          <div class="meta">Grains</div>
+          <p class="text">Stone-ground to perfection, makes soft rotis that stay fresh longer.</p>
+        </article>
+        <article class="product reveal">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17c3-3 7-5 9-5s6 2 9 5"/><path d="M5 20c2-2 5-3 7-3s5 1 7 3"/><circle cx="12" cy="8" r="2"/></svg>
+          </div>
+          <div class="title">Premium Basmati Rice</div>
+          <div class="meta">Grains</div>
+          <p class="text">Aged for superior aroma, cooks fluffy and separate every time.</p>
+        </article>
+        <!-- Pulses -->
+        <article class="product reveal">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 18c-2-2-2-6 1-8s6-3 8-1 2 6-1 8-6 3-8 1Z"/></svg>
+          </div>
+          <div class="title">Toor Dal <span style="opacity:.7;font-weight:500;">(Yellow Lentils)</span></div>
+          <div class="meta">Pulses</div>
+          <p class="text">Rich in protein, perfect for traditional dal preparations.</p>
+        </article>
+        <article class="product reveal">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20c-4 0-7-3-7-7S8 6 12 6s7 3 7 7-3 7-7 7Z"/></svg>
+          </div>
+          <div class="title">Masoor Dal <span style="opacity:.7;font-weight:500;">(Red Lentils)</span></div>
+          <div class="meta">Pulses</div>
+          <p class="text">Quick-cooking, nutritious addition to your daily meals.</p>
+        </article>
+        <article class="product reveal">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 19c-3-3-3-8 0-11s8-3 11 0 3 8 0 11-8 3-11 0Z"/></svg>
+          </div>
+          <div class="title">Moong Dal <span style="opacity:.7;font-weight:500;">(Green Gram)</span></div>
+          <div class="meta">Pulses</div>
+          <p class="text">Light and digestible, ideal for all age groups.</p>
+        </article>
+        <!-- Spices -->
+        <article class="product reveal">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8"/></svg>
+          </div>
+          <div class="title">Coriander Powder <span style="opacity:.7;font-weight:500;">(Dhaniya)</span></div>
+          <div class="meta">Spices</div>
+          <p class="text">Freshly ground, aromatic and vibrant.</p>
+        </article>
+        <article class="product reveal">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c-3 4-3 9 0 13 3-4 3-9 0-13Z"/><path d="M8 5c-2 3-2 7 0 10 2-3 2-7 0-10Z"/><path d="M16 5c2 3 2 7 0 10-2-3-2-7 0-10Z"/></svg>
+          </div>
+          <div class="title">Kali Mirch <span style="opacity:.7;font-weight:500;">(Black Pepper)</span></div>
+          <div class="meta">Spices</div>
+          <p class="text">Premium whole peppercorns with intense flavor.</p>
+        </article>
+        <article class="product reveal">
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h8"/></svg>
+          </div>
+          <div class="title">Garam Masala</div>
+          <div class="meta">Spices</div>
+          <p class="text">Authentic blend of 12 aromatic spices.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section container">
+      <div class="section-header reveal">
+        <h2>Why Choose Us</h2>
+      </div>
+      <div class="features">
+        <div class="feature reveal">
+          <div class="ficon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 3 7v5c0 5 4 9 9 10 5-1 9-5 9-10V7l-9-5Z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h4>100% Organic Certified</h4>
+        </div>
+        <div class="feature reveal">
+          <div class="ficon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17s3-2 9-2 9 2 9 2"/><path d="M6 13c2-2 4-3 6-3s4 1 6 3"/><path d="M12 4c-2 2-3 4-3 6s1 4 3 6c2-2 3-4 3-6s-1-4-3-6Z"/></svg>
+          </div>
+          <h4>Farm Fresh Quality</h4>
+        </div>
+        <div class="feature reveal">
+          <div class="ficon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="7" width="18" height="10" rx="2"/><path d="M7 7v-2h10v2"/></svg>
+          </div>
+          <h4>Traditional Processing</h4>
+        </div>
+        <div class="feature reveal">
+          <div class="ficon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
+          </div>
+          <h4>No Preservatives</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>What Our Customers Say</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial reveal">
+            <p class="quote">&ldquo;The quality is unmatched. Every grain speaks of purity and freshness.&rdquo;</p>
+            <div class="author">Rajesh Kumar</div>
+            <div class="location">Delhi</div>
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+          </article>
+          <article class="testimonial reveal">
+            <p class="quote">&ldquo;Finally found authentic organic products that deliver on their promise.&rdquo;</p>
+            <div class="author">Priya Mehta</div>
+            <div class="location">Mumbai</div>
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+          </article>
+          <article class="testimonial reveal">
+            <p class="quote">&ldquo;The aroma and taste remind me of my grandmother&apos;s kitchen.&rdquo;</p>
+            <div class="author">Amit Sharma</div>
+            <div class="location">Bangalore</div>
+            <div class="stars" aria-label="5 stars">★★★★★</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container about">
+      <div class="reveal">
+        <h2>About DesiSuddha</h2>
+        <p style="margin-top:10px; color: rgba(44,36,22,0.9);">At DesiSuddha, we bridge the gap between traditional Indian farming and modern organic standards. Every product is sourced directly from certified organic farms, processed using time-honored methods, and packaged with care to preserve nature&apos;s goodness.</p>
+        <div class="values" style="margin-top:16px;">
+          <span class="chip">Authentic</span>
+          <span class="chip">Organic</span>
+          <span class="chip">Sustainable</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="card">
+          <div class="card__body">
+            <h4 style="margin-bottom:8px;">We stand for</h4>
+            <ul style="margin:0; padding-left:18px; color: rgba(44,36,22,0.9);">
+              <li>Transparent sourcing &amp; fair practices</li>
+              <li>Minimal processing to retain nutrition</li>
+              <li>Thoughtful packaging for freshness</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer">
+      <div class="footer-grid">
+        <div>
+          <h3>DesiSuddha</h3>
+          <p>Organic Food From India</p>
+          <div class="socials" aria-label="Social media links">
+            <a href="#" target="_blank" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            </a>
+            <a href="#" target="_blank" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+            </a>
+            <a href="https://wa.me/919452550395" target="_blank" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12a8 8 0 1 1-14.9 4.5L3 21l4.6-1.2A8 8 0 0 1 12 4a8 8 0 0 1 8 8Z"/><path d="M16 14s-1 1-2 1-3-1-4-2-2-3-2-4 1-2 1-2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><a href="mailto:desisuddha@gmail.com">desisuddha@gmail.com</a></p>
+          <p><a href="tel:+919452550395">+91 9452550395</a></p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <p><a href="#home">Home</a></p>
+          <p><a href="#featured">Products</a></p>
+          <p><a href="#about">About</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2025 DesiSuddha. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Header behavior and active link highlighting
+    const header = document.querySelector('.site-header');
+    const nav = document.querySelector('.nav');
+    const links = [...nav.querySelectorAll('a')];
+    const menuBtn = document.querySelector('.menu-toggle');
+
+    const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+    function onScroll(){
+      if(window.scrollY > 10){ header.classList.add('scrolled'); } else { header.classList.remove('scrolled'); }
+      let fromTop = window.scrollY + 90;
+      sections.forEach((sec, i) => {
+        if(sec.offsetTop <= fromTop && sec.offsetTop + sec.offsetHeight > fromTop){
+          links.forEach(l => l.classList.remove('active'));
+          links[i].classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('load', onScroll);
+
+    // Smooth scroll with header offset
+    links.forEach(a => a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if(!target) return;
+      const top = target.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({ top, behavior: 'smooth' });
+      if(window.innerWidth < 900){ nav.classList.remove('open'); menuBtn.classList.remove('active'); menuBtn.setAttribute('aria-expanded','false'); }
+    }));
+
+    // Mobile menu
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+      const open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('in'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.18 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Subtle parallax on hero image
+    const heroImg = document.querySelector('.hero-media img');
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY * 0.06; // subtle
+      heroImg.style.transform = `translateY(${y}px)`;
+    });
+  </script>
+</body>
+</html>
